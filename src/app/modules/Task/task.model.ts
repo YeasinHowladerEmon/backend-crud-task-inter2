@@ -6,11 +6,12 @@ const taskSchema = new Schema<ITask, TaskModel>(
     title: {
       type: String,
       required: [true, 'Title is required'],
+      max: 10
     },
     description: {
       type: String,
       required: [true, 'description is required'],
-      max: 20
+      max: 60
     },
     status: {
       type: String,

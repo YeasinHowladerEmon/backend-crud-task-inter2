@@ -27,6 +27,7 @@ const getTask = catchAsync(async (req: Request, res: Response) => {
 const updateTaskId = catchAsync(async (req: Request, res: Response) => {
   const id = req.params.id;
   const status = req.body.status;
+  console.log(req.body.status);
   const result = await TaskService.updateTaskId(id, status);
   sendResponse<ITask>(res, {
     statusCode: httpStatus.OK,

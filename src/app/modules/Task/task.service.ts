@@ -28,7 +28,6 @@ const deleteTaskId = async (id: string): Promise<ITask | null> => {
 export const TaskService = {
   createTask,
   getTask,
-
   updateTaskId,
   deleteTaskId
 };
