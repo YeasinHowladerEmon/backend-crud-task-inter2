@@ -10,10 +10,6 @@ const getTask = async (): Promise<ITask[]> => {
   const result = await Task.find({});
   return result;
 };
-const getTaskId = async (id: string) => {
-  const result = await Task.findOne({ _id: new ObjectId(id) });
-  return result;
-};
 const updateTaskId = async (
   id: string,
   status: string
@@ -32,7 +28,7 @@ const deleteTaskId = async (id: string): Promise<ITask | null> => {
 export const TaskService = {
   createTask,
   getTask,
-  getTaskId,
+
   updateTaskId,
   deleteTaskId
 };

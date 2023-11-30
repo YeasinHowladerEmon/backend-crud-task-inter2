@@ -3,6 +3,6 @@ import { taskRoutes } from '../modules/Task/task.route';
 
 const router = express.Router();
 
-router.use('/Task', taskRoutes)
+router.use('/task', taskRoutes)
 
 export default router;
